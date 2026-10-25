@@ -1,25 +1,66 @@
 aid: gridfield
+
 name: Gridfield
-description: 'Gridfield is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by crane-venture-partners) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Gridfield provides AI supercomputing clusters, built and operated end‑to‑end, enabling enterprises to run large‑scale machine‑learning workloads. The platform offers scalable compute resources, managed infrastructure, and integrated tools for data scientists and engineers, delivering high‑performance, secure, and cost‑effective AI solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/gridfield/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- AI
+- Supercomputing
+- Cloud
+- Machine Learning
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- crane-venture-partners
+
 common:
+- type: Hosts
+  url: hosts/gridfield-hosts.yml
+- type: Vendors
+  url: vendors/gridfield-vendors.yml
+- type: DomainSecurity
+  url: security/gridfield-domain-security.yml
 - type: Website
   url: https://gridfield.co/
+
+apis: []
+
+x-backed-by:
+- crane-venture-partners
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://gridfield.co/
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
